@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ItzJustEric.github.io/Ainotesummarizer",
+  "homepage": "https://github.com/ItzJustEric/Ainotesummarizer",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
