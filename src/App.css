@@ -1,0 +1,31 @@
+body {
+  background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 141, 1) 50%, rgba(83, 137, 237, 1) 100%);
+  margin: 0;
+  min-height: 100vh;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5rem; /* Use relative units for scaling */
+  margin-top: 10px;
+}
+
+#root {
+  max-width: 1280px;
+  width: 90%; /* So it shrinks on smaller screens */
+  margin: 0 auto;
+  padding: 2rem 1rem; /* less padding on smaller screens */
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Optional: Make text scale a bit on smaller screens */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  #root {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,160 @@
+.input-container {
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: 100%;  /* allow shrinking */
+}
+
+.input-form {
+    position: relative;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+    min-height: 105px;
+    padding: 15px 15px 45px 15px;
+    font-size: 16px;
+    line-height: 1.5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    outline: none;
+    resize: none;
+    box-sizing: border-box;
+    background-color: rgb(27, 26, 26);
+}
+
+.input-btn {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.input-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+textarea {
+    resize: none;
+}
+
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Sidebar */
+.history-container {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    overflow: auto;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.history-sidebar {
+    width: 250px;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid #ccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+
+.chat-title {
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.chat-title:hover {
+    background-color: #d1cbcb;
+}
+
+.chat-title.selected {
+    background-color: #000000;
+}
+
+.chat-main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 250px; /* prevent overlap with fixed sidebar */
+    box-sizing: border-box;
+}
+
+.chat-details {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.response-container {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+    .input-container {
+        width: 90%;
+    }
+
+    .history-sidebar {
+        width: 200px;
+        padding: 10px;
+    }
+
+    .chat-main {
+        margin-left: 200px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .history-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .chat-main {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .input-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
